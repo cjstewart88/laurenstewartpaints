@@ -1,7 +1,8 @@
 $(document).ready(function() {
   $('.nav-item').click(function() {
-    $('#mywork').hide();
-    $('#about').hide();
+    $('.nav-item').removeClass('active');
+    $(this).addClass('active');
+    $('section').hide();
     $('#'+$(this).data('section')).show();
   });
 });
